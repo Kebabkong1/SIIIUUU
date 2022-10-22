@@ -1,4 +1,4 @@
-leagueID = {
+league_id = {
     "championsLeague": "CL",
     "worldCup": "WC",
     "bundesliga": "BL1",
