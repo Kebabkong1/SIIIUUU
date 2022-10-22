@@ -1,8 +1,8 @@
 leagueID = {
-    "championsLeage": "CL",
+    "championsLeague": "CL",
     "worldCup": "WC",
     "bundesliga": "BL1",
-    "eredevie": "DED",
+    "eredevise": "DED",
     "brasil": "BSA ",
     "laLiga": "PD",
     "ligue1": "FL1",
