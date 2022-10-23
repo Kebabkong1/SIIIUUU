@@ -12,16 +12,13 @@ def saving_to_dict(league):
     teams_json = response_json["teams"]
     teams_dict = {}
     for el in teams_json:
-        teams_dict[el["shortName"]] = el["id"]
+        teams_dict[el["shortName"]] = {"id":el["id"]}
     return teams_dict
 
 leagues = {}
 
 i = 0
-print(league_id)
-print(league_id.values())
 for val in league_id.values():
-    print(val)
     league_key = val
     league_teams = saving_to_dict(val)
     val = []
