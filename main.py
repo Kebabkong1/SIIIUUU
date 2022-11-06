@@ -22,14 +22,14 @@ def add_result_array(matches, league_short_name):
         result = match_info["score"]["winner"]
         match result:
             case 'HOME_TEAM':
-                league_data["leagues"][league_short_name][home_team].setdefault('resultArray', []).append('3')
-                league_data["leagues"][league_short_name][away_team].setdefault('resultArray', []).append('0')
+                league_data["leagues"][league_short_name][home_team].setdefault('resultArray', []).append(3)
+                league_data["leagues"][league_short_name][away_team].setdefault('resultArray', []).append(0)
             case 'AWAY_TEAM':
-                league_data["leagues"][league_short_name][home_team].setdefault('resultArray', []).append('0')
-                league_data["leagues"][league_short_name][away_team].setdefault('resultArray', []).append('3')        
+                league_data["leagues"][league_short_name][home_team].setdefault('resultArray', []).append(0)
+                league_data["leagues"][league_short_name][away_team].setdefault('resultArray', []).append(3)        
             case 'DRAW':
-                league_data["leagues"][league_short_name][home_team].setdefault('resultArray', []).append('1')
-                league_data["leagues"][league_short_name][away_team].setdefault('resultArray', []).append('1')        
+                league_data["leagues"][league_short_name][home_team].setdefault('resultArray', []).append(1)
+                league_data["leagues"][league_short_name][away_team].setdefault('resultArray', []).append(1)        
             case _: 
                 print('undefined value in score winner :'  + str(result))
 
@@ -44,4 +44,3 @@ for index, league_short_name in enumerate(league_id.values()):
 
 with open("leagues_result.json", "w",  encoding='utf8') as outfile:
     json.dump(league_data, outfile, ensure_ascii=False)
-
