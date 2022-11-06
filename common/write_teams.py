@@ -1,9 +1,10 @@
 import requests
 import time
 import json
-# from ..env.secrets import api_token
-from constants import league_id
+from common.constants import league_id
+from env import secrets
 
+print(secrets.api_token)
 def saving_to_dict(league):
     headers = {"X-Auth-Token": '34e1475dd9f740f797baf591f0ab5e30'}
     api_url = ("http://api.football-data.org/v4/competitions/" + league + "/teams")
